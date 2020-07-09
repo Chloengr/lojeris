@@ -14,7 +14,7 @@ class Property extends Component {
           <div className="more-info">
             <div className="property-info">
               <i className="fa fa-calendar"></i>
-              {properties.createdAt}
+              {properties.createdAt.substring(0,10)}
             </div>
             <div className="property-info">
               <i className="fa fa-tag"></i>
