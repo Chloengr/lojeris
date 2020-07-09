@@ -12,7 +12,7 @@ export function fetchProperties() {
   return dispatch => {
     dispatch(fetchPropertiesRequest());
     fetch('http://lojeris.api.pierre-jehan.com/properties')
-      .then(response => response.json())
+      .then(response =>  response.json())
       .then(data => dispatch(fetchPropertiesSuccess(data['hydra:member'])))
       .catch(err => dispatch(fetchPropertiesFailure(err)))
   }
