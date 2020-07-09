@@ -58,7 +58,7 @@ export function fetchDistricts() {
     dispatch(fetchDistrictsRequest());
     fetch('http://lojeris.api.pierre-jehan.com/districts')
       .then(response => response.json())
-      .then(data => dispatch(fetchDistrictsSuccess(data['hydra:member'])))
+      .then(data => dispatch(fetchDistrictsSuccess(data['hydra:member']))) 
       .catch(err => dispatch(fetchDistrictsFailure(err)))
   }
 }

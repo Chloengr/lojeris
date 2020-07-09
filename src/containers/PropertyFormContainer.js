@@ -3,6 +3,8 @@ import PropertyForm from "../components/PropertyForm/PropertyForm";
 
 const mapStateToProps = (state, ownProps) => ({
   properties: state.properties.properties,
+  categories: state.categories.categories,
+  districts: state.districts.districts,
   loading: state.properties.loading,
 });
 
