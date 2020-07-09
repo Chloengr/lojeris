@@ -6,7 +6,7 @@ import PropertiesContainer from "./containers/PropertiesContainer";
 import PropertyFormContainer from "./containers/PropertyFormContainer";
 import "./App.css";
 import HomeContainer from "./containers/HomeContainer";
-import PropertyDetail from "./components/Properties/PropertyDetail";
+import PropertyDetailContainer from "./containers/PropertyDetailContainer";
 
 function App() {
   return (
@@ -18,17 +18,15 @@ function App() {
           <Route path="/agency" component={Agency} />
           <Route path="/properties" component={PropertiesContainer} />
           <Route path="/propertyForm" component={PropertyFormContainer} />
-          <Route path="/property/:id" component={PropertyDetail} />
+          <Route path="/property/:id" component={PropertyDetailContainer} />
           <Route>
             <p>Page not found</p>
           </Route>
         </Switch>
       </div>
       <footer className="site-footer">
-        <div className="container">
-            Copyright © 2020 Lojeris
-        </div>
-      </footer> 
+        <div className="container">Copyright © 2020 Lojeris</div>
+      </footer>
     </>
   );
 }

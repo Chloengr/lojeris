@@ -5,7 +5,6 @@ import "./PropertyForm.scss";
 class PropertyForm extends Component {
   render() {
     const { properties } = this.props;
-    console.log(properties);
     return (
       <>
         <h2 className="page-title">PROPOSER VOTRE BIEN</h2>
