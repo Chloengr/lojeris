@@ -5,7 +5,7 @@ class Properties extends Component {
   render() {
     const { properties } = this.props;
     const propertiesJsx = properties.map((p) => (
-      <article key={p.id} class="property">
+      <article key={p.id} className="property">
         <Property properties={p} />
       </article>
     ));
