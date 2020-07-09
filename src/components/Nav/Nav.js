@@ -18,11 +18,6 @@ class Nav extends Component {
             <nav className="main-nav">
                 <ul>
                   <li className="nav-item">
-                        <Link className="navbar-brand" to="/">
-
-                </Link>
-                    </li>
-                  <li className="nav-item">
                     <NavLink to="/" exact className={"nav-link"}>
                       Accueil
                     </NavLink>
