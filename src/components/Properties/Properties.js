@@ -11,7 +11,7 @@ class Properties extends Component {
     ));
     return (
       <>
-        <div className="page-title">PROPRIETES</div>
+        <h2 className="page-title">PROPRIETES</h2>
         <div className="properties">{propertiesJsx}</div>
       </>
     );
