@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Agency from "./components/Agency/Agency";
 import PropertiesContainer from "./containers/PropertiesContainer";
-import ProperyHome from "./components/PropertyForm/PropertyForm";
+import PropertyFormContainer from "./containers/PropertyFormContainer";
 import "./App.css";
 import HomeContainer from "./containers/HomeContainer";
 
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" exact component={HomeContainer} />
           <Route path="/agency" component={Agency} />
           <Route path="/properties" component={PropertiesContainer} />
-          <Route path="/propertyHome" component={ProperyHome} />
+          <Route path="/propertyForm" component={PropertyFormContainer} />
           <Route>
             <p>Page not found</p>
           </Route>
