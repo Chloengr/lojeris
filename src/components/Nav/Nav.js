@@ -38,7 +38,7 @@ class Nav extends Component {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/propertyHome" className={"nav-link"}>
+              <NavLink to="/propertyForm" className={"nav-link"}>
                 Proposer votre bien
               </NavLink>
             </li>
