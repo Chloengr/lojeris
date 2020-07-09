@@ -22,6 +22,11 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <footer className="site-footer">
+        <div className="container">
+            Copyright © 2020 Lojeris
+        </div>
+      </footer> 
     </>
   );
 }
