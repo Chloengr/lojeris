@@ -6,6 +6,7 @@ import PropertiesContainer from "./containers/PropertiesContainer";
 import PropertyFormContainer from "./containers/PropertyFormContainer";
 import "./App.css";
 import HomeContainer from "./containers/HomeContainer";
+import PropertyDetail from "./components/Properties/PropertyDetail";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/agency" component={Agency} />
           <Route path="/properties" component={PropertiesContainer} />
           <Route path="/propertyForm" component={PropertyFormContainer} />
+          <Route path="/property/:id" component={PropertyDetail} />
           <Route>
             <p>Page not found</p>
           </Route>
