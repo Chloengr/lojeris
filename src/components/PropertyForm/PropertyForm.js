@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import "./PropertyForm.scss";
 
 class PropertyForm extends Component {
   render() {
     return (
       <>
-        <h2>PROPOSER VOTRE BIEN</h2>
+        <h2 className="page-title">PROPOSER VOTRE BIEN</h2>
         <form>
-          <div class="form-row">
-            <div class="form-group col-md-4">
+          <div className="form-row">
+            <div className="form-group col-md-4">
               <label for="price">Prix:</label>
               <input
                 type="text"
@@ -17,7 +18,7 @@ class PropertyForm extends Component {
                 placeholder="Entrez un prix"
               />
             </div>
-            <div class="form-group col-md-4">
+            <div className="form-group col-md-4">
               <label for="surface">Surface:</label>
               <input
                 type="number"
@@ -27,7 +28,7 @@ class PropertyForm extends Component {
                 placeholder="Entrez la surface"
               />
             </div>
-            <div class="form-group col-md-4">
+            <div className="form-group col-md-4">
               <label for="rooms">Nombre de pièces:</label>
               <input
                 type="number"
@@ -58,8 +59,8 @@ class PropertyForm extends Component {
               placeholder="Ajouter une image"
             />
           </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
+          <div className="form-row">
+            <div className="form-group col-md-6">
               <label for="category">Categorie:</label>
               <select className="form-control" id="category">
                 <option>1</option>
@@ -69,7 +70,7 @@ class PropertyForm extends Component {
                 <option>5</option>
               </select>
             </div>
-            <div class="form-group col-md-6">
+            <div className="form-group col-md-6">
               <label for="district">Quartier:</label>
               <select className="form-control" id="district">
                 <option>1</option>

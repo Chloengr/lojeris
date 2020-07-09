@@ -1,12 +1,13 @@
 import React, { Component } from "react";
+import "./Agency.scss";
 
 class Agency extends Component {
   render() {
     return (
       <>
-        <h2>NOTRE AGENCE</h2>
-        <h3>What is Lorem Ipsum?</h3>
-        <p>
+        <h2 className="page-title">NOTRE AGENCE</h2>
+        <h3 className="paragraph-title">What is Lorem Ipsum?</h3>
+        <p className="p-tag">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -17,8 +18,8 @@ class Agency extends Component {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <h3>Where does it come from?</h3>
-        <p>
+        <h3 className="paragraph-title">Where does it come from?</h3>
+        <p className="p-tag">
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
           it over 2000 years old. Richard McClintock, a Latin professor at
