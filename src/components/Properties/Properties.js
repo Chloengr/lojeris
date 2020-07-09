@@ -6,8 +6,8 @@ class Properties extends Component {
   render() {
     const { properties } = this.props;
     const propertiesJsx = properties.map((p) => (
-      <Link to={`/property/${p.id}`}>
-        <article key={p.id} className="property">
+      <Link key={p.id} to={`/property/${p.id}`}>
+        <article className="property">
           <Property properties={p} />
         </article>
       </Link>

@@ -12,7 +12,7 @@ class PropertyForm extends Component {
         <form>
           <div className="form-row">
             <div className="form-group col-md-4">
-              <label for="price">Prix:</label>
+              <label>Prix:</label>
               <input
                 type="text"
                 className="form-control"
@@ -22,7 +22,7 @@ class PropertyForm extends Component {
               />
             </div>
             <div className="form-group col-md-4">
-              <label for="surface">Surface:</label>
+              <label>Surface:</label>
               <input
                 type="number"
                 className="form-control"
@@ -32,7 +32,7 @@ class PropertyForm extends Component {
               />
             </div>
             <div className="form-group col-md-4">
-              <label for="rooms">Nombre de pièces:</label>
+              <label>Nombre de pièces:</label>
               <input
                 type="number"
                 className="form-control"
@@ -43,7 +43,7 @@ class PropertyForm extends Component {
             </div>
           </div>
           <div className="form-group">
-            <label for="description">Description:</label>
+            <label>Description:</label>
             <input
               type="text"
               className="form-control"
@@ -53,7 +53,7 @@ class PropertyForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label for="image">Image:</label>
+            <label>Image:</label>
             <input
               type="text"
               className="form-control"
@@ -64,7 +64,7 @@ class PropertyForm extends Component {
           </div>
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label for="category">Categorie:</label>
+              <label>Categorie:</label>
               <select className="form-control" id="category">
                 <option>1</option>
                 <option>2</option>
@@ -74,7 +74,7 @@ class PropertyForm extends Component {
               </select>
             </div>
             <div className="form-group col-md-6">
-              <label for="district">Quartier:</label>
+              <label>Quartier:</label>
               <select className="form-control" id="district">
                 <option>1</option>
                 <option>2</option>
@@ -86,7 +86,7 @@ class PropertyForm extends Component {
           </div>
 
           <div className="form-group">
-            <label for="features">Détail:</label>
+            <label>Détail:</label>
             <input
               type="text"
               className="form-control"
