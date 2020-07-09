@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 
 import "./PropertyForm.scss";
+import Categories from "../Categories/Categories";
+import Districts from "../Districts/Districts";
 
 class PropertyForm extends Component {
   render() {
-    const { properties } = this.props;
+    const { categories, districts } = this.props;
     return (
       <>
         <h2 className="page-title">PROPOSER VOTRE BIEN</h2>
@@ -64,23 +66,11 @@ class PropertyForm extends Component {
           <div className="form-row">
             <div className="form-group col-md-6">
               <label>Categorie:</label>
-              <select className="form-control" id="category">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <Categories categories={categories} />
             </div>
             <div className="form-group col-md-6">
-              <label>Quartier:</label>
-              <select className="form-control" id="district">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <label htmlFor="district">Quartier:</label>
+              <Districts districts={districts} />
             </div>
           </div>
 
