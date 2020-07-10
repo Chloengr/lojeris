@@ -20,7 +20,8 @@ class PropertyDetail extends Component {
         </div>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">Prix: {property.price} € | Quartier: {property.district.name} | Date d'ajout du bien: {property.createdAt.substring(0, 10)} | 
-          Catégorie: {property.category.name} | Surface: {property.surface} m2 | Nombre de pièces: {property.bedroom} | Détails supplémentaires: {property.features.properties}</li>
+          Catégorie: {property.category.name} | Surface: {property.surface} m2 | Nombre de pièces: {property.bedroom}</li>
+          <li className="list-group-item">Détails supplémentaires: {property.features.properties}</li>
         </ul>
         </div>
       </section>
