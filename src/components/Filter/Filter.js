@@ -4,16 +4,18 @@ class Filter extends Component {
     render() {
         const allProperties = ['Appartement', 'Maison'];
 
+        let keyword = '';
+
         function  search(event) {
-            let keyword = event.target.value;
+            keyword = event.target.value;
         }
 
         return (
             <div>
                 <input type="text" placeholder="Rechercher une propriété" onChange={
-                    (e)=>this.search(e)
+                    (e)=>search(e)
                 } />
-                {allProperties.filter(p => p.includes({search})).map(filteredName => (
+                {allProperties.filter(p => p.includes(keyword)).map(filteredName => (
                     <li>
                         {filteredName}
                     </li>
