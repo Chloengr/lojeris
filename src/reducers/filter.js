@@ -2,7 +2,7 @@ import {SEARCH} from "../actions";
 
 const initialState = {}
 
-export default function reducer(state = initialState, action) {
+function filter(state = initialState, action) {
     switch(action.type) {
         case SEARCH: {
             const {value} = action;
@@ -13,3 +13,5 @@ export default function reducer(state = initialState, action) {
             return state;
     }
 }
+
+export default filter();
