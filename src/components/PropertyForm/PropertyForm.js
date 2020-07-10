@@ -1,16 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 
 import "./PropertyForm.scss";
 import Categories from "../Categories/Categories";
 import Districts from "../Districts/Districts";
 
-class PropertyForm extends Component {
-  render() {
-    const { categories, districts } = this.props;
+function PropertyForm(props) {
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    props.handleSubmit();
+  }
+  const { properties, categories, districts } = props;
     return (
       <>
         <h2 className="page-title">PROPOSER VOTRE BIEN</h2>
-        <form>
+        <form onSubmit={event => handleSubmit(event)}>
           <div className="form-row">
             <div className="form-group col-md-4">
               <label>Prix:</label>
@@ -20,6 +24,8 @@ class PropertyForm extends Component {
                 id="price"
                 aria-describedby="price"
                 placeholder="Entrez un prix"
+                value={properties.price}
+                onChange={event => props.handleChange('price', event.target.value)}
               />
             </div>
             <div className="form-group col-md-4">
@@ -30,6 +36,8 @@ class PropertyForm extends Component {
                 id="surface"
                 aria-describedby="surface"
                 placeholder="Entrez la surface"
+                value={properties.surface}
+                onChange={event => props.handleChange('surface', event.target.value)}
               />
             </div>
             <div className="form-group col-md-4">
@@ -40,6 +48,8 @@ class PropertyForm extends Component {
                 id="rooms"
                 aria-describedby="rooms"
                 placeholder="Entrez le nombre de pièces"
+                value={properties.bedroom}
+                onChange={event => props.handleChange('bedroom', event.target.value)}
               />
             </div>
           </div>
@@ -51,6 +61,8 @@ class PropertyForm extends Component {
               id="description"
               aria-describedby="description"
               placeholder="Entrez la description"
+              value={properties.description}
+              onChange={event => props.handleChange('description', event.target.value)}
             />
           </div>
           <div className="form-group">
@@ -66,11 +78,11 @@ class PropertyForm extends Component {
           <div className="form-row">
             <div className="form-group col-md-6">
               <label>Categorie:</label>
-              <Categories categories={categories} />
+              <Categories categories={categories} properties={properties} handleChange={props.handleChange}/>
             </div>
             <div className="form-group col-md-6">
               <label htmlFor="district">Quartier:</label>
-              <Districts districts={districts} />
+              <Districts districts={districts}  properties={properties} handleChange={props.handleChange}/>
             </div>
           </div>
 
@@ -90,7 +102,6 @@ class PropertyForm extends Component {
         </form>
       </>
     );
-  }
 }
 
 export default PropertyForm;
