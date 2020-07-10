@@ -10,7 +10,7 @@ class PropertyDetail extends Component {
     return (
       <div>
         <img
-          src={"images/" + property.picture}
+          src={'http://lojeris.api.pierre-jehan.com/uploads/'+ property.picture.filePath}
           alt=""
           className="card-img-top"
         />

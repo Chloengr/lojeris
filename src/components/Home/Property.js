@@ -5,7 +5,11 @@ class Property extends Component {
     const {properties} = this.props
     return (
       <div>
-        <img src={'images/' + properties.picture} alt="" className='card-img-top'/>
+        <img 
+          src={'http://lojeris.api.pierre-jehan.com/uploads/'+ properties.picture.filePath}
+          alt=""
+          className='card-img-top'
+        />
         <footer className="overlay">
           <div className="info">
             <div className="tag">{properties.price} €</div>
