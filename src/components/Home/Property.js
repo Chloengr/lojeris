@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Property extends Component {
   render() {
-    const {properties} = this.props
+    const { properties } = this.props;
     return (
       <div>
-        <img src={'images/' + properties.picture} alt="" className='card-img-top'/>
+        <img
+          src={"images/" + properties.picture}
+          alt=""
+          className="card-img-top"
+        />
         <footer className="overlay">
           <div className="info">
             <div className="tag">{properties.price} €</div>
@@ -14,7 +18,7 @@ class Property extends Component {
           <div className="more-info">
             <div className="property-info">
               <i className="fa fa-calendar"></i>
-              {properties.createdAt.substring(0,10)}
+              {properties.createdAt.substring(0, 10)}
             </div>
             <div className="property-info">
               <i className="fa fa-tag"></i>
