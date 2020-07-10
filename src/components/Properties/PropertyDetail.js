@@ -1,45 +1,36 @@
 import React, { Component } from "react";
+import "./PropertyDetail.scss";
 
 class PropertyDetail extends Component {
-  constructor(props) {
-    super(props);
-    const { properties, match } = this.props;
-    const id = match.params.id - 1;
-    this.property = properties[id];
-  }
-
   render() {
+    const { property } = this.props;
+    if (!property) {
+      return <p>Chargement en cours..</p>;
+    }
     return (
       <div>
         <img
-          src={"images/" + this.property.picture}
+          src={"images/" + property.picture}
           alt=""
           className="card-img-top"
         />
-        <footer className="overlay">
-          <div className="info">
-            <div className="tag">{this.property.price} €</div>
-            <h3>{this.property.district.name}</h3>
+
+        <div className="price">
+          <div className="tag">Prix: {property.price} €</div>
+        </div>
+        <div className="more-info">
+          <div className="info-line">Quartier: {property.district.name}</div>
+          <div className="info-line">
+            Date d'ajout du bien: {property.createdAt.substring(0, 10)}
           </div>
-          <div className="more-info">
-            <div className="property-info">
-              <i className="fa fa-calendar"></i>
-              {this.property.createdAt.substring(0, 10)}
-            </div>
-            <div className="property-info">
-              <i className="fa fa-tag"></i>
-              {this.property.category.name}
-            </div>
-            <div className="property-info">
-              <i className="fa fa-expand"></i>
-              {this.property.surface} m2
-            </div>
-            <div className="property-info">
-              <i className="fa fa-bed"></i>
-              {this.property.bedroom} ch
-            </div>
+          <div className="info-line">Catégorie: {property.category.name}</div>
+          <div className="info-line">Surface: {property.surface} m2</div>
+          <div className="info-line">Nombre de pièces: {property.bedroom}</div>
+          <div className="info-line">
+            Détails supplémentaires: {property.features.properties}
           </div>
-        </footer>
+          <div className="info-line">Description: {property.description}</div>
+        </div>
       </div>
     );
   }
