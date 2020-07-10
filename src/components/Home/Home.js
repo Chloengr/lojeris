@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import Property from "./Property";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
     const { properties } = this.props;
     const propertiesJsx = properties.slice(0, 12).map((p) => (
-      <article key={p.id} className="property">
-        <Property properties={p} />
-      </article>
+      <Link key={p.id} to={`/property/${p.id}`}>
+        <article key={p.id} className="property">
+          <Property properties={p} />
+        </article>
+      </Link>
     ));
     return (
       <div>
