@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from "react-redux";
 
 class Filter extends Component {
     render() {
@@ -24,10 +23,5 @@ class Filter extends Component {
     }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-    search: state.search.search
-});
+export default filter;
 
-const mapDispatchToProps = (dispatch, ownProps) => ({});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
