@@ -14,9 +14,9 @@ class PropertyDetail extends Component {
     
     return (
       <section className="container">
-<div className="card">
+      <div className="card">
         <img
-          src={'http://lojeris.api.pierre-jehan.com/uploads/'+ property.picture.filePath}
+          src={'http://lojeris.api.pierre-jehan.com/uploads/' + property.picture.filePath}
           alt=""
           className="card-img-top"
         />

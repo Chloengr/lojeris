@@ -83,7 +83,7 @@ export function createProperty() {
   return (dispatch, getState) => {
     const propertyFormData = getState().properties.propertiesForm;
     dispatch(createPropertyRequest());
-    fetch('http://ecommerce.pierre-jehan.com/api/properties', {
+    fetch('http://lojeris.api.pierre-jehan.com/properties', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

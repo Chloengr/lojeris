@@ -6,10 +6,7 @@ class Property extends Component {
     return (
       <div>
         <img
-          src={
-            "http://lojeris.api.pierre-jehan.com/uploads/" +
-            properties.picture.filePath
-          }
+          src={'http://lojeris.api.pierre-jehan.com/uploads/' + properties.picture.filePath }
           alt=""
           className="card-img-top"
         />
