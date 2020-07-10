@@ -1,4 +1,4 @@
-import {SEARCH} from '../actions/searchbar';
+import {SEARCH} from "../actions";
 
 const initialState = {}
 
