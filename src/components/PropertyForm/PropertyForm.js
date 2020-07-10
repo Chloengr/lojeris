@@ -1,15 +1,19 @@
 import React, { Component } from "react";
+
 import "./PropertyForm.scss";
+import Categories from "../Categories/Categories";
+import Districts from "../Districts/Districts";
 
 class PropertyForm extends Component {
   render() {
+    const { categories, districts } = this.props;
     return (
       <>
         <h2 className="page-title">PROPOSER VOTRE BIEN</h2>
         <form>
           <div className="form-row">
             <div className="form-group col-md-4">
-              <label for="price">Prix:</label>
+              <label>Prix:</label>
               <input
                 type="text"
                 className="form-control"
@@ -19,7 +23,7 @@ class PropertyForm extends Component {
               />
             </div>
             <div className="form-group col-md-4">
-              <label for="surface">Surface:</label>
+              <label>Surface:</label>
               <input
                 type="number"
                 className="form-control"
@@ -29,7 +33,7 @@ class PropertyForm extends Component {
               />
             </div>
             <div className="form-group col-md-4">
-              <label for="rooms">Nombre de pièces:</label>
+              <label>Nombre de pièces:</label>
               <input
                 type="number"
                 className="form-control"
@@ -40,7 +44,7 @@ class PropertyForm extends Component {
             </div>
           </div>
           <div className="form-group">
-            <label for="description">Description:</label>
+            <label>Description:</label>
             <input
               type="text"
               className="form-control"
@@ -50,7 +54,7 @@ class PropertyForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label for="image">Image:</label>
+            <label>Image:</label>
             <input
               type="text"
               className="form-control"
@@ -61,29 +65,17 @@ class PropertyForm extends Component {
           </div>
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label for="category">Categorie:</label>
-              <select className="form-control" id="category">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <label>Categorie:</label>
+              <Categories categories={categories} />
             </div>
             <div className="form-group col-md-6">
-              <label for="district">Quartier:</label>
-              <select className="form-control" id="district">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <label htmlFor="district">Quartier:</label>
+              <Districts districts={districts} />
             </div>
           </div>
 
           <div className="form-group">
-            <label for="features">Détail:</label>
+            <label>Détail:</label>
             <input
               type="text"
               className="form-control"

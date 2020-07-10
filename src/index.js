@@ -11,10 +11,12 @@ import thunk from 'redux-thunk';
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { fetchProperties } from './actions';
+import { fetchProperties, fetchDistricts, fetchCategories } from './actions';
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 store.dispatch(fetchProperties())
+store.dispatch(fetchDistricts())
+store.dispatch(fetchCategories())
 
 ReactDOM.render(
   <React.StrictMode>

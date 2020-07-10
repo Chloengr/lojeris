@@ -68,6 +68,10 @@ fieldset {
   color: #fff;
 }
 
+legend{
+  width: 10%
+}
+
 footer.site-footer {
   margin-top: 10px;
   background-color: #073855;
