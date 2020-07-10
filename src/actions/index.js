@@ -7,6 +7,7 @@ export const FETCH_CATEGORIES_SUCCESS = 'FETCH_CATEGORIES_SUCCESS';
 export const FETCH_DISTRICTS_REQUEST = 'FETCH_DISTRICTS_REQUEST';
 export const FETCH_DISTRICTS_FAILURE = 'FETCH_DISTRICTS_FAILURE';
 export const FETCH_DISTRICTS_SUCCESS = 'FETCH_DISTRICTS_SUCCESS';
+export const SEARCH = 'SEARCH';
 
 export function fetchProperties() {
   return dispatch => {
@@ -73,4 +74,8 @@ export function fetchDistrictsFailure(error) {
 
 export function fetchDistrictsSuccess(districts) {
   return { type: FETCH_DISTRICTS_SUCCESS, payload: districts };
+}
+
+export function search(value) {
+  return {type: SEARCH, payload: value};
 }
